@@ -25,4 +25,11 @@ const división = 10 / 5;
     console.log(resultado);
     console.log(resultado.toFixed(1));
     console.log(resultado === 0.3);
-    
+
+    //Operaciones Avanzadas
+    const raizCuadrada = Math.sqrt(16); // Raíz cuadrada
+    const valorAbsoluto = Math.abs(-7); // Valor absoluto
+    const aleatorio = Math.random(); // Número aleatorio entre 0 y 1
+    console.log(raizCuadrada);
+    console.log(valorAbsoluto);
+    console.log(aleatorio);

@@ -1,0 +1,99 @@
+*¿Qué es la conversión de tipos en JavaScript?
+
+La conversión de tipos es un concepto fundamental en JavaScript, un lenguaje de programación caracterizado por su flexibilidad y capacidad para adaptarse a diferentes tipos de datos durante la ejecución del código. Este proceso es esencial porque el código que escribimos como seres humanos debe ser traducido para que sea comprensible para el programa de ordenador. JavaScript, un lenguaje interpretado, maneja esta conversión de manera dinámica, lo que significa que decide cómo tratar los tipos de datos sobre la marcha, mientras el código se ejecuta.
+*¿Cómo funciona JavaScript como lenguaje interpretado?
+
+JavaScript es un ejemplo clásico de un lenguaje interpretado. A diferencia de los lenguajes compilados como C o Swift, donde el código es traducido completamente antes de ejecutarse, JavaScript traduce su código conforme se ejecuta. Esto se asemeja a tener a alguien traduciendo instrucciones a medida que cocinamos, versus tener la receta ya traducida antes de empezar. Este enfoque permite a JavaScript ser altamente flexible, pero también implica que el chequeo de tipos sucede de manera dinámica.
+*¿Qué significa que JavaScript tenga un "tipado débil"?
+
+El tipado débil es una de las características que distingue a JavaScript. Esto significa que JavaScript permite más flexibilidad al asignar valores a las variables. Por ejemplo, puedes asignar un número a una variable y luego asignar un string al mismo espacio de memoria sin errores. Así, JavaScript maneja situaciones inusuales, como sumar un número y un valor booleano, mediante la conversión implícita de tipos, convirtiendo los valores a un tipo compatible para seguir la ejecución.
+
+const numero = 2;
+const booleano = true;
+const resultado = numero + booleano; // Esto resulta en 3
+
+En este ejemplo, JavaScript convierte el booleano true a un número 1 para realizar la operación de suma.
+*¿Cuáles son los tipos de conversión en JavaScript?
+
+JavaScript permite dos tipos de conversión: implícita y explícita.
+
+    Conversión implícita: JavaScript realiza automáticamente sin que el programador precise intervención, como en el caso de sumar un número con un booleano.
+
+    Conversión explícita: El programador decide convertir manualmente un tipo de dato a otro, por ejemplo, transformando un booleano en un string o en un número.
+
+let booleano = true;
+let booleanToString = booleano.toString(); // convierte a "true"
+let booleanToNumber = Number(booleano); // convierte a 1
+
+*¿Por qué es importante entender la conversión de tipos?
+
+Comprender la conversión de tipos en JavaScript es crucial para evitar errores durante la ejecución, especialmente cuando el lenguaje realiza conversiones implícitas que pueden llevar a resultados inesperados. Saber cuándo y cómo utilizar la conversión explícita te permitirá tener un mayor control sobre cómo se manejan los datos en tus aplicaciones, mejorando la calidad y eficacia de tu código.
+
+La conversión de tipos es un tema importante que obliga a los desarrolladores a ser conscientes de las implicaciones de cómo se manejan los datos en un lenguaje tan dinámico como JavaScript. Dominar este concepto te permitirá navegar con mayor confianza en el mundo del desarrollo web, optimizando tus soluciones y mejorando tu experiencia de codificación. ¡Sigue explorando y perfeccionando tus habilidades!
+
+//////////////////////////////////////////////////////////
+¿Qué es el typecasting explícito en JavaScript?
+
+Typecasting en JavaScript se refiere a convertir tipos de datos de manera explícita o implícita. Comencemos explorando la conversión explícita de tipos, uno de los métodos más comunes para manejar diferentes tipos de datos en nuestros programas.
+
+Podemos convertir un string a un tipo numérico usando funciones como parseInt() y parseFloat(). Por ejemplo, podemos tener un string con un número "42" y convertirlo a un entero así:
+
+const integer = parseInt("42");
+console.log(typeof integer); // number
+
+De manera similar, para convertir un string decimal como "3.14" a un número flotante:
+
+const float = parseFloat("3.14");
+console.log(typeof float); // number
+
+JavaScript no distingue entre números enteros y decimales en cuanto al tipo de dato, ambos son considerados como number.
+¿Cómo se convierte de binario a decimal?
+
+Es posible convertir un número binario a decimal utilizando parseInt() con la base adecuada. Aquí un ejemplo práctico:
+
+const binary = "1010";
+const decimal = parseInt(binary, 2);
+console.log(decimal); // 10
+
+Este código convierte el número binario "1010" a su representación decimal que es 10.
+¿Qué es el typecasting implícito en JavaScript?
+
+JavaScript puede realizar conversiones de tipo sin intervención explícita del programador, esto se conoce como typecasting implícito. La suma de un string con un número ilustra este caso:
+
+const resultado = "5" + 3;
+console.log(resultado); // 53
+
+En este ejemplo, JavaScript convierte el número 3 a un string y lo concatena con "5", dando como resultado "53".
+¿Qué sucede con los booleanos?
+
+Al combinar booleanos y otros tipos de datos, JavaScript también realiza conversiones. Por ejemplo:
+
+const sumaConBoolean = "3" + true;
+console.log(sumaConBoolean); // "3true"
+
+Aquí el booleano true es convertido a string y luego concatenado. Sin embargo, si sumamos booleanos con números:
+
+const sumaConNumero = 2 + true;
+console.log(sumaConNumero); // 3
+
+El booleano true es transformado a 1, resultando en una suma numérica.
+Prueba tus conocimientos sobre typecasting
+
+Para solidificar el aprendizaje, considera resolver el siguiente ejercicio:
+
+Tienes el código:
+
+const numero = "596";
+const numeroConvertido = parseInt(numero);
+console.log(typeof numero); // ?
+console.log(typeof numeroConvertido); // ?
+
+¿Cuáles son los tipos de datos que resultarán de los console.log? Las opciones son:
+
+    A) string y number
+    B) string y string
+    C) number y string
+
+La respuesta correcta es A, porque el numero es inicialmente un string y después del parseInt, numeroConvertido se convierte en un number. Continúa explorando y practicando con code snippets para perfeccionar tus habilidades en typecasting en JavaScript.
+
+¡Sigue asi! tu comprensión de estos conceptos básicos te permitirá escribir código más eficiente y adaptativo.
